@@ -53,8 +53,8 @@ class BingoGame(inputs: List<String>) {
 
     private val validCardLine = "(\\d+\\s+){4}(\\d+)".toRegex()
 
-    val calledNumbers: List<Int>
-    val cards: MutableList<BingoCard> = mutableListOf()
+    private val calledNumbers: List<Int>
+    private val cards: MutableList<BingoCard> = mutableListOf()
 
     init {
         calledNumbers = inputs.first().split(",").map { it.toInt() }
